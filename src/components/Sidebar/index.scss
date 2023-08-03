@@ -9,18 +9,25 @@
 
   .logo {
     display: block;
-    padding: 8px 0;
+    padding-top: 8px;
+    text-decoration: none;
   }
 
   img {
     display: block;
     margin: 8px auto;
-    width: 24px;
+    margin-bottom: 0;
+    width: 40px;
     height: auto;
+    border-radius: 50%;
   }
 
   & .sub-logo {
-    width: 50px;
+    color: #ffd700;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
   }
 
   nav {
