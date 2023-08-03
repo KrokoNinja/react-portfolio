@@ -1,7 +1,6 @@
 import './index.scss'
 import { Link, NavLink } from 'react-router-dom'
 import LogoS from '../../assets/images/cut-out-lennert.jpg'
-import LogoSubtitle from '../../assets/images/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faEnvelope,
