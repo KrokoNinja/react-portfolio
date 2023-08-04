@@ -42,6 +42,7 @@ const Home = () => {
     '.',
   ]
 
+  //TODO Look up how he made the letter animation to continue after ending the hover
   useEffect(() => {
     const timer = setTimeout(() => {
       setLetterClass('text-animate-hover')
