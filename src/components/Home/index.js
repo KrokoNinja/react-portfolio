@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import './index.scss'
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
+import Hero from '../../assets/images/cut-out-lennert.jpg'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -75,6 +76,7 @@ const Home = () => {
           CONTACT ME
         </Link>
       </div>
+      <img src={Hero} alt="hero" className="hero" />
     </div>
   )
 }
