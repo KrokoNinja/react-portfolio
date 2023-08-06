@@ -6,26 +6,9 @@ import AnimatedLetters from '../AnimatedLetters'
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const nameArray = [' ', 'L', 'e', 'n', 'n', 'e', 'r', 't', ',']
-  const jobArray = [
-    'F',
-    'r',
-    'o',
-    'n',
-    't',
-    'e',
-    'n',
-    'd',
-    ' ',
-    'D',
-    'e',
-    'v',
-    'e',
-    'l',
-    'o',
-    'p',
-    'e',
-    'r',
-  ]
+  const jobArray = ['F', 'r', 'o', 'n', 't', 'e', 'n', 'd', ' ']
+  const jobArray2 = ['D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r']
+
   const countryArray = [
     'f',
     'r',
@@ -69,6 +52,12 @@ const Home = () => {
             letterClass={letterClass}
             strArray={jobArray}
             idx={22}
+          />
+          <br className="mobile" />
+          <AnimatedLetters
+            letterClass={letterClass}
+            strArray={jobArray2}
+            idx={31}
           />
           <br />
           <AnimatedLetters
