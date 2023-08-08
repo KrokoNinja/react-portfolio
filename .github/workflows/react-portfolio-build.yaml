@@ -39,7 +39,18 @@ jobs:
         run: |
           npm ci
           npm run build
-          npm install serve
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: v16.x
+
+      - name: Build Node assets
+        env:
+          CI: true
+          SITE_URL: ${{ inputs.site-url }}
+        run: |
+          npm install -g serve
           serve -s build
 
 # Please do not touch the following action
@@ -48,7 +59,7 @@ jobs:
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-eu.ionos.space
-          project-id: 99668def-b754-40c8-86da-b19a78088b9c
+          project-id: 2ccef01d-4349-4a7b-8906-3c69b2788ee7
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
