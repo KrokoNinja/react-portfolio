@@ -1,12 +1,15 @@
 .stage-cube-cont {
+  --cube-size: 100px;
   width: 50%;
   height: 100%;
   top: 0;
-  padding-top: 18%;
   margin-left: 0;
   position: absolute;
   right: 0;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  transform: translateY(calc(var(--cube-size) * -1));
 }
 
 .cube-spinner {
@@ -15,16 +18,16 @@
   animation-iteration-count: infinite;
   animation-duration: 12s;
   transform-style: preserve-3d;
-  transform-origin: 100px 100px 0;
-  margin-left: calc(50% - 100px);
+  transform-origin: var(--cube-size) var(--cube-size) 0;
+  margin-left: calc(50% - var(--cube-size));
 
   div {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: calc(var(--cube-size) * 2);
+    height: calc(var(--cube-size) * 2);
     border: 1px solid #ccc;
     background-color: rgba(255, 255, 255, 0.4);
-    font-size: 100px;
+    font-size: var(--cube-size);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,22 +35,22 @@
   }
 
   .face1 {
-    transform: translateZ(100px);
+    transform: translateZ(var(--cube-size));
   }
   .face2 {
-    transform: rotateY(90deg) translateZ(100px);
+    transform: rotateY(90deg) translateZ(var(--cube-size));
   }
   .face3 {
-    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+    transform: rotateY(90deg) rotateX(90deg) translateZ(var(--cube-size));
   }
   .face4 {
-    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(var(--cube-size));
   }
   .face5 {
-    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(var(--cube-size));
   }
   .face6 {
-    transform: rotateX(-90deg) translateZ(100px);
+    transform: rotateX(-90deg) translateZ(var(--cube-size));
   }
 }
 
@@ -72,5 +75,39 @@
   }
   83% {
     transform: rotateX(90deg) rotateX(90deg);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) and (min-height: 1000px) {
+  .stage-cube-cont {
+    --cube-size: 80px;
+    transform: translateY(0);
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+  }
+
+  .cube-spinner {
+    padding-bottom: 35%;
+  }
+}
+
+@media (max-width: 767px) {
+  .stage-cube-cont {
+    --cube-size: 50px;
+    transform: translateY(0);
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+  }
+
+  .cube-spinner {
+    padding-bottom: 50%;
+  }
+}
+
+@media (max-height: 750px) {
+  .stage-cube-cont {
+    display: none;
   }
 }

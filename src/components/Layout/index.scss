@@ -113,3 +113,47 @@
     }
   }
 }
+
+@media (min-width: 768px) and (max-width: 1200px) and (min-height: 1000px) {
+  .about-page {
+    .text-zone {
+      width: 70%;
+      left: 20%;
+      top: 40%;
+    }
+
+    h1 {
+      font-size: 50px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    .text-zone {
+      width: 60%;
+      left: 20%;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (min-height: 750px) and (max-width: 768px) {
+  .about-page {
+    .text-zone {
+      top: 40%;
+    }
+  }
+}
